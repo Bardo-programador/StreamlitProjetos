@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "streamlitprojetos"
+version = "0.1.0"
+description = "Um conjunto de aplicacoes usando streamlit"
+authors = ["Samuel Roberto"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "1.22.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
