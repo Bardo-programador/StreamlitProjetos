@@ -26,7 +26,7 @@ if caixa_seletora == "Gerador de senha":
                     caracteres += opcao
             senha = gerador.gerador_de_senha(slider, caracteres)
             caracteres = ""
-            st.write(f"A senha é:\n{senha.encode('utf-8').decode('utf-8')}")
+            (f"A senha é:\n{senha.encode('utf-8').decode('utf-8')}")
         except:
             st.write("Escolha uma opcao")
 
