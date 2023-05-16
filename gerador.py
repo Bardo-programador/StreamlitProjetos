@@ -7,7 +7,7 @@ numeros = "1234567890"
 especiais ="!@#$%^&*"
 opcoes = [letras_maiusculas, letras_minusculas, numeros, especiais]
 def gerador_de_senha(numero_caracteres, caracteres):
-    senha = ""
+    senha = r""
     for i in range(numero_caracteres):
         senha += choice(caracteres)
     return senha
