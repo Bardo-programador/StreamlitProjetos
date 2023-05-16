@@ -4,7 +4,7 @@ from random import choice
 letras_maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 letras_minusculas = "abcdefghijklmnopqrstuvwxyz"
 numeros = "1234567890"
-especiais ="!@#$"
+especiais ="!@#%*-_"
 opcoes = [letras_maiusculas, letras_minusculas, numeros, especiais]
 def gerador_de_senha(numero_caracteres, caracteres):
     senha = ""
