@@ -24,9 +24,9 @@ if caixa_seletora == "Gerador de senha":
             for opcao, escolha in zip(gerador.opcoes, opcoes):
                 if escolha:
                     caracteres += opcao
-            senha = gerador.gerador_de_senha(slider, caracteres).encode('utf-8').decode('utf-8')
+            senha = gerador.gerador_de_senha(slider, caracteres)
             caracteres = ""
-            st.write(f"A senha é:\n{senha}")
+            st.write(f"A senha é:\n{senha.encode('utf-8').decode('utf-8')}")
         except:
             st.write("Escolha uma opcao")
 
