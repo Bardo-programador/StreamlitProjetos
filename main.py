@@ -3,7 +3,7 @@ import gerador
 import cifra_cesar
 
 caixa_seletora = st.sidebar.selectbox("Quis projetos deseja navegar:",
-                                      ("Home","Gerador de senha","Cifra Cesar"))
+                                      ("Home","Gerador de senha","Cifra Cesar","Cifra de Vigenere"))
 
 if caixa_seletora == "Home":
     st.title("Página inicial")
@@ -47,7 +47,23 @@ if caixa_seletora == "Cifra Cesar":
         st.title("Mensagem decifrada")
         st.write(cifra_cesar.cesar(texto, chave, -1))
 
+if caixa_seletora == "Cifra de Vigenere":
+    from cifra_vigenere import VigenereCipher
+    alfabeto = "abcdefghijklmnopqrstuvwxyz"
+    st.title("Cifra de Vigenere")
+    with st.sidebar:
+        texto = st.text_area("Digite o texto")
+        senha = st.text_input("Digite a senha da cifra")
+        cifrar = st.button("Cifrar")
+        decifrar= st.button("Decifrar")
 
+    if cifrar:
+        st.title("Mensagem cifrada")
+        st.write(VigenereCipher(senha, alfabeto).encode(texto))
+
+    if decifrar:
+        st.title("Mensagem decifrada")
+        st.write(VigenereCipher(senha, alfabeto).decode(texto))
 
 
 
