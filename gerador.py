@@ -9,7 +9,11 @@ opcoes = [letras_maiusculas, letras_minusculas, numeros, especiais]
 def gerador_de_senha(numero_caracteres, caracteres):
     senha = ""
     for i in range(numero_caracteres):
-        senha += choice(caracteres) 
+        caracter = choice(caracteres)
+        if caracter == "$" or caracter=="*" :
+            senha += f"\{caracter}"
+        else:
+            senha += caracter
     return senha
 
 
